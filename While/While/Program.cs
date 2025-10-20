@@ -65,6 +65,6 @@ else
     //if (kasutajateinevalik == 0)
     //{
     //    kasutajatelefon = kasutajateinevalik;
-    }
+    
 
 }
