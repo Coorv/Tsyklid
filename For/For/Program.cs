@@ -26,7 +26,15 @@
 //}
 //Console.ReadLine(); // peatame programmi klahvisisestuse taha
 
-// ülesanne
+// kirjuta programm mis küsib kasutajalt tema nime ja parooli
+// kui parool on vale, anna nimeline teavitus
+// kui nimi on vale, ütle et isik pole registreerunud
+// tekita massiiv suurusega 3
+// kui mõtlemad on õiged, siis while tsüklis küsi kasutajalt tema 3 lemmikloomanime
+// kuva talle sisestuste arv (mitu ta sisestas)
+// ning küsi milline on ta lemmikuim
+// tagasta kasutajale lause koos selle lemmiknimega adresseerides seda järjendist[]
+
 
 Console.WriteLine("Mis on sinu kasutaja nimi?");
 string kasutajanimi = Console.ReadLine();
@@ -36,29 +44,37 @@ if (kasutajanimi != "kris")
     do
     {
         Console.WriteLine("Sa ei ole registreeritud");
+        kasutajanimi = Console.ReadLine();
     } while (kasutajanimi != "kris");
 }
-else
-{
-    Console.WriteLine("Mis on sinu Parool?");
-}
+Console.WriteLine("Mis on sinu Parool?");
+
 string parool = Console.ReadLine(); ;
 if (parool != "1234")
 {
-    Console.WriteLine("See on vale parool");
+    do
+    {
+        Console.WriteLine("See on vale parool");
+        parool = Console.ReadLine();
+    } while (parool != "1234");
 }
 
 string[] nimed = new string[3];
 int sisestustearv = 0;
-string sisestused = "";
 while (sisestustearv < 3)
 {
-    Console.WriteLine("Palun sisesta oma  lemmikloomade nimed");
+    Console.WriteLine("Palun sisesta oma lemmikloomade nimed");
     nimed[sisestustearv] = Console.ReadLine();
     sisestustearv++;
 }
-Console.WriteLine($"Sa oled sisestanud{sisestustearv}");
+Console.WriteLine($"Sa oled sisestanud {sisestustearv} nime");
 Console.WriteLine("Milline on sinu lemmikuim?");
 string lemmiknimi = Console.ReadLine();
-lemmiknimi = nimed[0];
-Console.WriteLine($"Sinu lemmikuim on {lemmiknimi}, see oli {nimed[0]} nimi");
+for (int valik = 0; valik < nimed.Length; valik++)
+{
+    if (lemmiknimi == nimed[valik])
+    {
+        Console.WriteLine($"Sinu lemmikuim on {lemmiknimi}, see oli {valik + 1}. looma nimi");
+    }
+    
+}
