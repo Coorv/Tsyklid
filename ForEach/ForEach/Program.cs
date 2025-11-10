@@ -56,17 +56,73 @@ foreach(var värv in kasutajavärvid)
     {
         case "punane":
             Console.BackgroundColor = ConsoleColor.Red; 
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" p   u   n   a   n   e   ");
             break;
         case "roheline":
             Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" r   o   h   e   l   i   n   e ");
             break;
         case "sinine":
             Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" s   i   n   i   n   e ");
             break;
         case "kollane":
             Console.BackgroundColor= ConsoleColor.Yellow;
+            Console.ForegroundColor= ConsoleColor.White;
+            Console.WriteLine(" k   o   l   l   a   n   e ");
+            break;
+        case "helesinine":
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" h   e   l   e   s   i   n   i   n   e ");
+            break;
+        case "lilla":
+            Console.BackgroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" l   i   l   l   a ");
+            break;
+        case "oranz":
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Kahjuks pole oranz saadaval");
+            break;
+        case "roosa":
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Kahjuks pole roosa saadaval");
+            break;
+        case "must":
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" m   u   s   t ");
+            break;
+        case "valge":
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine(" v   a   l   g   e ");
+            break;
+        case "tumesinine":
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" t   u   m   e   s   i   n   i   n   e ");
+            break;
+        case "pruun":
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" p   r   u   u   n ");
+            break;
+        case "hall":
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" h   a   l   l ");
             break;
         default:
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"Sellist värvi ei tunne {värv}");
             break;
     }
 }
