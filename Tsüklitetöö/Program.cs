@@ -1,6 +1,6 @@
 ﻿//1. ülesanne
+
 string kasutajanimi = "";
-int parool = 0;
 if ( kasutajanimi == "")
 {
     do
@@ -10,18 +10,30 @@ if ( kasutajanimi == "")
     } while (kasutajanimi == "");
 }
 
+//2. ülesanne
 
-while (parool == 0)
+Console.WriteLine("Mis on sinu parool?");
+int parool = 0;
+parool = int.Parse(Console.ReadLine());
+while (parool < 1000 && parool < 9999)
 {
-    Console.WriteLine("Mis on sinu parool?");
+    Console.WriteLine("parool peab olema neljakohaline");
     parool = int.Parse(Console.ReadLine());
-    do
-    {
-        Console.WriteLine("parool peab olema neljakohaline");
-    } while (parool < 1000 && parool > 9999);
 }
-string[] puuviljad = new string[5] {"a", "l", "p", "g", "f"}; 
-for (int i = 0; i < puuviljad.Length; i++)
+
+//3. ülesanne
+
+List<string> puuviljad = new List<string>{"Õun", "Apelsiin", "Banaan", "Lemon", "Pirn"}; 
+for (int i = 0; i < puuviljad.Count; i++)
 {
-    Console.WriteLine("");
+    Console.WriteLine($"{ i + 1 }. vili on: {puuviljad[i]}");
+}
+
+//4. ülesanne
+
+int[] arvud = { 1, 2, 3, 5, 6 };
+foreach (int arvudloendis in arvud)
+{
+    int korrutus = arvudloendis * arvudloendis;
+    Console.WriteLine(korrutus);
 }
